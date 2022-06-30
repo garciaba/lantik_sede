@@ -1,0 +1,7 @@
+spec_version: "1.0"
+indicators:
+ svc_fr: "metricSelector=builtin:service.errors.server.rate:filter(and(in("dt.entity.service",entitySelector("type(service),tag(~"CloudAut_SEDE~")")))):splitBy():avg:auto:sort(value(avg,descending)):limit(10)"
+ svc_rt_p50: "metricSelector=builtin:service.response.time:filter(and(in("dt.entity.service",entitySelector("type(service),tag(~"CloudAut_SEDE~")")))):splitBy():median:auto:sort(value(median,descending)):limit(10)"
+ svc_rt_p90: "metricSelector=builtin:service.response.time:filter(and(in("dt.entity.service",entitySelector("type(service),tag(~"CloudAut_SEDE~")")))):splitBy():percentile(90):auto:sort(value(percentile(90),descending)):limit(10)"
+ svc_rt_p95: "metricSelector=builtin:service.response.time:filter(and(in("dt.entity.service",entitySelector("type(service),tag(~"CloudAut_SEDE~")")))):splitBy():percentile(90):auto:sort(value(percentile(90),descending)):limit(10)"
+ 
