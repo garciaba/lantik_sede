@@ -30,7 +30,7 @@ objectives:
   warning: []
   weight: 1
   key_sli: false
-- sli: svc_fr
+- sli: svc_fr_test
   displayName: ""
   pass:
   - criteria:
