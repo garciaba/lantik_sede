@@ -1,6 +1,6 @@
 spec_version: 0.1.4
 indicators:
-  5xx_rate: entitySelector=type(SERVICE),tag("CloudAut_SEDE:SegundoNivel")&metricSelector=builtin:service.errors.fivexx.rate
+  5xx_rate: entitySelector=type(SERVICE),tag("CloudAut_SEDE:SegundoNivel")&metricSelector=builtin:service.errors.total.rate:splitBy()
   svc_rt_p50_1: MV2;MicroSecond;entitySelector=type(SERVICE),tag("CloudAut_SEDE")&metricSelector=builtin:service.response.time:splitBy():median:names
   svc_rt_p90_1: MV2;MicroSecond;entitySelector=type(SERVICE),tag("CloudAut_SEDE")&metricSelector=builtin:service.response.time:splitBy():percentile(90):names
   svc_rt_p95_1: MV2;MicroSecond;entitySelector=type(SERVICE),tag("CloudAut_SEDE")&metricSelector=builtin:service.response.time:splitBy():percentile(90):names
