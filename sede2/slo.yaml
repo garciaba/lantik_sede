@@ -1,0 +1,43 @@
+spec_version: ""
+filter: {}
+comparison:
+  compare_with: single_result
+  include_result_with_score: pass
+  number_of_comparison_results: 1
+  aggregate_function: avg
+objectives:
+- sli: svc_rt_p95_1
+  displayName: ""
+  pass:
+  - criteria:
+    - <600
+  warning: []
+  weight: 1
+  key_sli: false
+- sli: svc_rt_p90_1
+  displayName: ""
+  pass:
+  - criteria:
+    - <550
+  warning: []
+  weight: 1
+  key_sli: false
+- sli: svc_rt_p50_1
+  displayName: ""
+  pass:
+  - criteria:
+    - <500
+  warning: []
+  weight: 1
+  key_sli: false
+- sli: svc_fr_test_1
+  displayName: ""
+  pass:
+  - criteria:
+    - <2
+  warning: []
+  weight: 1
+  key_sli: false
+total_score:
+  pass: 90%
+  warning: 70%
